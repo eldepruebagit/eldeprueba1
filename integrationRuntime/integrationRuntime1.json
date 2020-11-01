@@ -1,0 +1,32 @@
+{
+	"name": "integrationRuntime1",
+	"properties": {
+		"type": "Managed",
+		"description": "de prueba",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "South Central US",
+				"nodeSize": "Standard_D8_v3",
+				"numberOfNodes": 1,
+				"maxParallelExecutionsPerNode": 8,
+				"vNetProperties": {
+					"vNetId": "/subscriptions/b47bc147-f21a-49fc-b50f-7214e5ffd0f9/resourceGroups/eldeprueba1/providers/Microsoft.Network/virtualNetworks/vnet",
+					"subnet": "default"
+				}
+			},
+			"ssisProperties": {
+				"catalogInfo": {
+					"catalogServerEndpoint": "eldeprueba.database.windows.net",
+					"catalogAdminUserName": "eldeprueba",
+					"catalogAdminPassword": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"catalogPricingTier": "S1"
+				},
+				"edition": "Standard",
+				"licenseType": "LicenseIncluded"
+			}
+		}
+	}
+}
